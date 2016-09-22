@@ -1,0 +1,12 @@
+<div ms-controller="accountSet">
+    <div class="m-ct-header f-cb">
+        <ul class="nav navbar-nav">
+            <li ms-repeat="navLabs" ms-class="{{el.name == activeLab ? 'active' : ''}}">
+                <a ms-attr-href="{{el.link}}">{{el.value}}</a>
+            </li>
+        </ul>
+    </div>
+
+    <div ms-view="ct" class="m-ct">
+    </div>
+</div>

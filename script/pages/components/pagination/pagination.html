@@ -1,0 +1,25 @@
+<div >
+    <div class="u-pagination f-cb" onselectstart="return false;" unselectable="on" ms-if="!!el.maxPage">
+        <div class="goPage">
+            跳转至第
+            <div class="u-input">
+                <input type="text" placeholder="页码" class="form-control" ms-duplex="goPage" ms-attr-max="el.maxPage" ms-keyup="setGoPage"></div>
+            页
+            <a ms-attr-href="pageUrl + goPage" class="u-btn small info f-vam">确定</a>
+        </div>
+
+        <div class="pagination f-fr" >
+            <a ms-attr-href="pageUrl + '1'" class="icon item">&lt;</a>
+            <span class="item" ms-if="curPage - 2 > 1">&hellip;</span>
+            <a ms-if="curPage-2 >= 1" ms-attr-href="pageUrl+(curPage-2)" class="item">{{curPage - 2}}</a>
+            <a ms-if="curPage-1 >= 1" ms-attr-href="pageUrl+(curPage-1)" class="item">{{curPage - 1}}</a>
+            <a ms-attr-href="pageUrl+curPage" class="item active">{{curPage}}</a>
+            <a ms-if="curPage + 1 <= el.maxPage" ms-attr-href="pageUrl+(curPage+1)" class="item">{{curPage + 1}}</a>
+            <a ms-if="curPage + 2 <= el.maxPage" ms-attr-href="pageUrl+(curPage+2)" class="item">{{curPage + 2}}</a>
+            <span class="item" ms-if="curPage + 2 < el.maxPage">&hellip;</span>
+            <a ms-attr-href="pageUrl + el.maxPage" class="icon item">&gt;</a>
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,8 @@
+<div ms-controller="setting">
+    <div class="m-slidebar">
+        <a ms-repeat="links" class="item" ms-class="{{el.name == module ? el.icon+' active' : el.icon}}" ms-attr-href="el.link">
+            {{el.value}}
+        </a>
+    </div>
+    <div ms-view="body" class="m-content"></div>
+</div>
